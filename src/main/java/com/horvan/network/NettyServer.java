@@ -33,14 +33,10 @@ public class NettyServer {
 				return Channels.pipeline(new StringDecoder(),new StringEncoder(),new ServerHandler());
 			}
 		});
-		
 		logger.info("绑定端口,并开始接收 客户端的连接");
-		
 		Channel bind = serverBootstrap.bind(new InetSocketAddress(8000));
 		logger.info("server 已经启动，监听端口:"+ bind.getLocalAddress() +",等待客户端连接。。。。");
-		
-		
-		
+
 	}
 	
 	private static class ServerHandler extends SimpleChannelHandler {
