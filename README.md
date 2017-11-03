@@ -26,3 +26,58 @@
     1. 晚上的javadoc 用户指南和阳历
     2. 简介简单
     3. 仅依赖于jdk1.5
+# 核心组件
+1. netty组件 
+    1. ChannelFactory
+    2. Boss
+    3. Worker
+    4. Channel
+    5. ChannelEvent
+    6. Pipeline
+    7. Handler
+    8. Sink
+2. Server端核心类
+    1. NioServerSocketChannelFactory
+    2. NioServerBossPool
+    3. NioWorkerPool
+    4. NioServerBoss
+    5. NioWorker
+    6. NioServerSocketChannel
+    7. NioAcceptedSocketChannel
+    8. DefaultChannelPipeline
+    9. NioServerSocketPipelineSink
+    10.Channels
+3. ChannelFactory -- channel工厂，很重要的类，保存启动相关参数
+    1. NioServerSocketChannelFactory
+    2. NioClientSocketChannelFactory
+    3. NioDatagramChannelFactory
+    4. 这是Nio的，还有Oio和Local的
+4. SelectorPool--- selector的线程池
+    1. NioServerBossPool  1
+    2. NioClientBossPool  1    
+    3. NioWorkerPool       2 * Processor
+    4. NioDatagramWorkerPool
+5. Selector -选择器，核心组件
+    1. NioServerBoss
+    2. NioClientBoss
+    3. NioWorker
+    4. NioDatagramWorker
+6. Channel -- 通道
+    1. NioServerSocketChannel
+    2. NioClientSocketChannel
+    3. NioAcceptedSocketChannel
+    4. NioDatagramChannel
+7. Sink --负责和底层的交互，如bind、write、close等
+    1. NioServerSocketPipelineSink
+    2. NioClientSocketPipelineSink
+    3. NioDatagramPipelineSink
+8. Pipeline --负责维护所有的Handler
+9. ChannelContext 一个Channel一个是Handler和Pipeline的中间件
+10. Handler -- 对Channel事件的处理器
+11. channelPipeline
+    1. ![channelPipeline](http://dl2.iteye.com/upload/attachment/0086/9698/a1ea7a7d-95b2-33f2-a494-0f4c31d8dfc3.png)
+    2. ![channelPipeline](http://dl2.iteye.com/upload/attachment/0086/9700/32e34f3c-4842-3a0c-9b59-9fbc52c0b54c.jpg)
+12. 线程模型
+    1. ![线程模型](http://dl2.iteye.com/upload/attachment/0086/9702/82978f65-4826-311a-9275-3076d026b890.jpg)
+    2. ![事件驱动](http://dl2.iteye.com/upload/attachment/0086/9704/acea5874-8886-3495-b19c-184925bc2506.gif)    
+ 
