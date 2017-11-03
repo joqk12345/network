@@ -58,7 +58,7 @@
     3. NioWorkerPool       2 * Processor
     4. NioDatagramWorkerPool
 5. Selector -选择器，核心组件
-    1. NioServerBoss
+    1. NioServerBoss, (boss tasks like connecting/accepting)
     2. NioClientBoss
     3. NioWorker
     4. NioDatagramWorker
@@ -79,5 +79,6 @@
     2. ![channelPipeline](http://dl2.iteye.com/upload/attachment/0086/9700/32e34f3c-4842-3a0c-9b59-9fbc52c0b54c.jpg)
 12. 线程模型
     1. ![线程模型](http://dl2.iteye.com/upload/attachment/0086/9702/82978f65-4826-311a-9275-3076d026b890.jpg)
-    2. ![事件驱动](http://dl2.iteye.com/upload/attachment/0086/9704/acea5874-8886-3495-b19c-184925bc2506.gif)    
+    2. ![事件驱动](http://dl2.iteye.com/upload/attachment/0086/9704/acea5874-8886-3495-b19c-184925bc2506.gif)
+13. ![netty的整体架构](http://dl2.iteye.com/upload/attachment/0086/9696/38dd1115-9034-33cd-aeac-8f358918a9a1.jpg)    
  

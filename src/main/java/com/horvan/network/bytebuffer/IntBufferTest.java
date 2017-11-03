@@ -1,6 +1,5 @@
 package com.horvan.network.bytebuffer;
 
-import com.horvan.network.NettyClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,9 +10,9 @@ public class IntBufferTest {
     public static void main(String[] args) {
 //        TestIntbuffer();
         //2、wrap方法的使用
-//        wrapTest();
+        wrapTest();
 
-        otherByteBuffer();
+//        otherByteBuffer();
     }
 
     private static void otherByteBuffer() {

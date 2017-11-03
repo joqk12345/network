@@ -1,4 +1,4 @@
-package com.horvan.network.bytebuffer;
+package com.horvan.network.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
