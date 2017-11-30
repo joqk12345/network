@@ -3,16 +3,26 @@ package com.horvan.network;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.xiaoleilu.hutool.Hutool;
+import com.xiaoleilu.hutool.lang.Console;
+import com.xiaoleilu.hutool.log.Log;
+import com.xiaoleilu.hutool.log.LogFactory;
+import com.xiaoleilu.hutool.log.StaticLog;
+import com.xiaoleilu.hutool.log.level.Level;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
-	static Logger logger = LoggerFactory.getLogger(App.class);
     public static void main( String[] args )
     {
-    	logger.info("开始启动系统了，哈哈哈哈哈哈");
         System.out.println( "开始进入系统了!" );
+        StaticLog.info("This is static {} log.", "INFO");
+        StaticLog.debug("this test {} ",Level.DEBUG);
+        Log log = LogFactory.get();
+        log.debug("This is {} log", "default");
+        Console.log("----------------------------------------------------------------------");
     }
 }
