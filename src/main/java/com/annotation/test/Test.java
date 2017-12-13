@@ -9,10 +9,10 @@ import java.lang.annotation.Annotation;
  * @Date ${date}
  * @{description}
  **/
-@JoqkAnnotation("qk")
+//@JoqkAnnotation("qk")
 public class Test {
 
-    @JoqkAnnotation("这个是主函数")
+//    @JoqkAnnotation("这个是主函数")
     public static void main(String[] args) {
         Class clazz = TestAnnotation.class;
         Controller controller =(Controller) clazz.getAnnotation(Controller.class);

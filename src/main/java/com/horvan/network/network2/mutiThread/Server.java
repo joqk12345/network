@@ -25,6 +25,8 @@ public class Server {
                 socket  =serverSocket.accept();
                 //创建一个新线程
                 ServerThread serverThread = new ServerThread(socket);
+                //设置优先级，范围为【1-10】，默认为5，未设置优先级会导致线程运行时速度慢
+                serverThread.setPriority(4);
                 serverThread.start();
                 count ++;
                 System.out.println("客户端的数量为:"+count);
